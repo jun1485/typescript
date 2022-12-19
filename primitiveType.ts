@@ -11,3 +11,10 @@ arr[5] = 'hello'; // Error, Property '5' does not exist on type '[string, number
 
 enum Avengers { Capt, IronMan, Thor }
 let hero: Avengers = Avengers.Capt;     // enum
+
+enum Avengers { Capt, IronMan, Thor }
+let hero: Avengers = Avengers[0];
+
+enum Avengers { Capt = 2, IronMan, Thor }     // enum index change
+let hero: Avengers = Avengers[2]; // Capt
+let hero: Avengers = Avengers[4]; // Thor
