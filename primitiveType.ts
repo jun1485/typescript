@@ -18,3 +18,7 @@ let hero: Avengers = Avengers[0];
 enum Avengers { Capt = 2, IronMan, Thor }     // enum index change
 let hero: Avengers = Avengers[2]; // Capt
 let hero: Avengers = Avengers[4]; // Thor
+
+let str: any = 'hi';
+let num: any = 10;
+let arr: any = ['a', 2, true];
