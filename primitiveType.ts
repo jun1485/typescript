@@ -22,3 +22,8 @@ let hero: Avengers = Avengers[4]; // Thor
 let str: any = 'hi';
 let num: any = 10;
 let arr: any = ['a', 2, true];
+
+letunuseful: void = undefined;    // void
+function notuse(): void {
+  console.log('sth');
+}   
