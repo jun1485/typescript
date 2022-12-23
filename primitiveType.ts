@@ -27,3 +27,10 @@ letunuseful: void = undefined;    // void
 function notuse(): void {
   console.log('sth');
 }   
+
+// 이 함수는 절대 함수의 끝까지 실행되지 않는다는 의미
+function neverEnd(): never {
+  while (true) {
+
+  }
+}
