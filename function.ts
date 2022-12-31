@@ -16,3 +16,12 @@ sum(10, 20); // 30
 sum(10, 20, 30); // error, too many parameters
 sum(10); // 타입 에러 없음
 
+
+
+function sum(a: number, ...nums: number[]): number {
+  const totalOfNums = 0;
+  for (let key in nums) {
+    totalOfNums += nums[key];
+  }
+  return a + totalOfNums;
+}
