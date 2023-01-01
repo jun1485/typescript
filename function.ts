@@ -18,7 +18,7 @@ sum(10); // 타입 에러 없음
 
 
 
-function sum(a: number, ...nums: number[]): number {
+function sum(a: number, ...nums: number[]): number {    // REST 
   const totalOfNums = 0;
   for (let key in nums) {
     totalOfNums += nums[key];
