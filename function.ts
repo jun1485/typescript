@@ -25,3 +25,9 @@ function sum(a: number, ...nums: number[]): number {    // REST
   }
   return a + totalOfNums;
 }
+
+
+interface UIElement {
+  // 아래 함수의 `this: void` 코드는 함수에 `this` 타입을 선언할 필요가 없다는 의미
+  addClickListener(onclick: (this: void, e: Event) => void): void;
+}
