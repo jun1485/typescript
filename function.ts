@@ -38,3 +38,6 @@ class Handler {
         // 위의 `UIElement` 인터페이스의 스펙에 `this`가 필요없다고 했지만 사용했기 때문에 에러가 발생합니다.
         this.info = e.message;
     }
+}
+let handler = new Handler();
+uiElement.addClickListener(handler.onClick); // error!
