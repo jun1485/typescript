@@ -41,3 +41,14 @@ class Handler {
 }
 let handler = new Handler();
 uiElement.addClickListener(handler.onClick); // error!
+
+    // UIElement 스펙에 맞춘 Handler 구현
+class Handler {
+    info: string;
+    onClick(this: void, e: Event) {
+        // `this`의 타입이 void이기 때문에 여기서 `this`를 사용할 수 없습니다.
+        console.log('clicked!');
+    }
+}
+let handler = new Handler();
+uiElement.addClickListener(handler.onClick);
