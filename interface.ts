@@ -15,3 +15,17 @@ function logAge(obj: personAge) {
 }
 let person = { name: 'Capt', age: 28 };
 logAge(person);
+
+// option 속성은 꼭 사용하지 않아도 오류로 나타나지 않는다.
+interface CraftBeer {
+  name: string;
+  hop?: number;  
+}
+
+let myBeer = {
+  name: 'Saporo'
+};
+function brewBeer(beer: CraftBeer) {
+  console.log(beer.name); // Saporo
+}
+brewBeer(myBeer);
