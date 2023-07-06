@@ -1,3 +1,4 @@
+// 객체 혹은 함수의 형태를 정의
 let person = { name: 'Capt', age: 28 };
 
 function logAge(obj: { age: number }) {
@@ -34,3 +35,21 @@ brewBeer(myBeer);
 function brewBeer(beer: CraftBeer) {
   console.log(beer.brewery); // Error: Property 'brewery' does not exist on type 'Beer'
 }
+
+
+// 특정 메서드를 구현하도록 강제
+interface Animal {
+  makeSound(): void;
+}
+
+class Dog implements Animal {
+  makeSound() {
+    console.log('Woof!');
+  }
+} // OK
+
+class Cat implements Animal {
+  purr() {
+    console.log('Purr...');
+  }
+} // Error: Class 'Cat' incorrectly implements interface 'Animal'. Property 'makeSound' is missing in type 'Cat' but required in type 'Animal'.
