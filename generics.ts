@@ -5,9 +5,19 @@ let numbers: Array<number> = [1, 2, 3];  // 숫자 배열
 let strings: Array<string> = ['Hello', 'World'];  // 문자열 배열
 
 
-function identity<T>(arg: T): T {  // 매개변수 타입 T
+function identity<T>(arg: T): T {  // 제네릭 함수 T, 매개변수 타입 T
   return arg;
 }
 
 let output1 = identity<string>('Hello');
 let output2 = identity<number>(123);
+
+
+interface GenericIdentityFn<T> {
+  (arg: T): T;
+}
+
+class GenericNumber<T> {
+  zeroValue: T;
+  add: (x: T, y: T) => T;
+}
