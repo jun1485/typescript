@@ -11,3 +11,4 @@ function multiply(a: number, b: number) {
 }
 
 let result = multiply(5, 10);  // result는 number 타입으로 추론됨
+
