@@ -15,3 +15,11 @@ let result = multiply(5, 10);  // result는 number 타입으로 추론됨
 // 배열과 객체의 초기화 값으로 타입 추론
 let numbers = [1, 2, 3];       // numbers는 number[] (숫자 배열) 타입으로 추론됨
 let person = { name: 'John', age: 30 };  // person은 { name: string, age: number } (객체 타입)으로 추론됨
+
+
+// 함수 매개변수로 타입 추론
+function greet(name: string) {
+  console.log(`Hello, ${name}!`);
+}
+
+greet('John');  // name 매개변수의 타입이 string으로 추론됨
