@@ -27,3 +27,11 @@ class Rectangle {
     this.height = height;
   }
 }
+
+function calculateArea(shape: Circle | Rectangle) {
+  if (shape instanceof Circle) {
+    console.log(Math.PI * shape.radius ** 2); // shape는 여기서 Circle 타입으로 좁혀짐
+  } else {
+    console.log(shape.width * shape.height); // shape는 여기서 Rectangle 타입으로 좁혀짐
+  }
+}
