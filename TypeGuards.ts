@@ -35,3 +35,15 @@ function calculateArea(shape: Circle | Rectangle) {
     console.log(shape.width * shape.height); // shape는 여기서 Rectangle 타입으로 좁혀짐
   }
 }
+
+
+// 사용자 정의 타입 가드
+interface Cat {
+  name: string;
+  meow(): void;
+}
+
+interface Dog {
+  name: string;
+  bark(): void;
+}
