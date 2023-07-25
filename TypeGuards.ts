@@ -47,3 +47,15 @@ interface Dog {
   name: string;
   bark(): void;
 }
+
+function isCat(animal: Cat | Dog): animal is Cat {
+  return (animal as Cat).meow !== undefined;
+}
+
+function playSound(animal: Cat | Dog) {
+  if (isCat(animal)) {
+    animal.meow(); // animal은 여기서 Cat 타입으로 좁혀짐
+  } else {
+    animal.bark(); // animal은 여기서 Dog 타입으로 좁혀짐
+  }
+}
