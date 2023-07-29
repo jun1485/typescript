@@ -19,3 +19,10 @@ const person: Person = {
 
 // 숫자 인덱스 타입(Number Index Types)
 // 배열이나 객체의 요소 타입 정의 가능.
+
+interface StringArray {
+  [index: number]: string;
+}
+
+const arr: StringArray = ['apple', 'banana', 'cherry'];
+const fruit: string = arr[0];
