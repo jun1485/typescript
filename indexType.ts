@@ -21,7 +21,7 @@ const person: Person = {
 // 배열이나 객체의 요소 타입 정의 가능.
 
 interface StringArray {
-  [index: number]: string;
+  [index: number]: string;    // 숫자 인덱스 시그니처
 }
 
 const arr: StringArray = ['apple', 'banana', 'cherry'];
