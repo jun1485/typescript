@@ -3,6 +3,7 @@
 // Partial<T>
 // 제공된 타입 'T'의 모든 속성을 선택적으로 만듦.
 // 'T'의 모든 속성 === 'optional'
+// PartialUser 타입은 'User' 인터페이스의 모든 속성을 선택적으로 가질 수 있음.
 interface User {
   name: string;
   age: number;
