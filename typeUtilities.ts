@@ -8,3 +8,9 @@ interface User {
   name: string;
   age: number;
 }
+
+type PartialUser = Partial<User>;
+
+const partialUser: PartialUser = {
+  name: 'John'
+};
