@@ -14,3 +14,12 @@ type PartialUser = Partial<User>;
 const partialUser: PartialUser = {
   name: 'John'
 };
+
+
+// Pick<T, K> 
+// 제공된 타입 T에서 K로 지정된 속성만 선택하여 새로운 타입 생성.
+interface User {
+  name: string;
+  age: number;
+  email: string;
+}
