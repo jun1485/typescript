@@ -23,3 +23,10 @@ interface User {
   age: number;
   email: string;
 }
+
+type UserBasicInfo = Pick<User, 'name' | 'age'>;
+
+const userBasicInfo: UserBasicInfo = {
+  name: 'John',
+  age: 30
+};
