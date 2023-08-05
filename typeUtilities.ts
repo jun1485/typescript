@@ -30,3 +30,12 @@ const userBasicInfo: UserBasicInfo = {
   name: 'John',
   age: 30
 };
+
+
+// omit<T, K>
+// 제공된 타입 T에서 K로 지정된 속성을 제외한 모든 속성을 가진 새로운 타입 생성.
+interface User {
+  name: string;
+  age: number;
+  email: string;
+}
