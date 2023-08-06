@@ -39,3 +39,10 @@ interface User {
   age: number;
   email: string;
 }
+
+type UserWithoutEmail = Omit<User, 'email'>;
+
+const user: UserWithoutEmail = {
+  name: 'John',
+  age: 30
+};
