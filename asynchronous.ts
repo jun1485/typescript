@@ -8,7 +8,20 @@
 
 function fetchData(): Promise<string> {
   return new Promise((resolve, reject) => {
-    // 비동기 작업 수행
-    // resolve(value) 또는 reject(error) 호출
+    // 비동기 작업 수행: 2초 후에 작업 완료 흉내
+    setTimeout(() => {
+      const success = true; // 이 값이 false라면 실패로 간주
+
+      if (success) {
+        resolve('데이터를 성공적으로 불러왔습니다.');
+      } else {
+        reject(new Error('데이터 불러오기 실패!'));
+      }
+    }, 2000);
   });
 }
+
+// 사용 예:
+fetchData()
+  .then(data => console.log(data)) // '데이터를 성공적으로 불러왔습니다.' 출력
+  .catch(error => console.error(error));
