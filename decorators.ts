@@ -7,3 +7,14 @@
     "target": "ES5" // 또는 그 이상
   }
 }
+
+// Class Decorators
+// 클래스 선언 바로 앞에 위치, 클래스의 생성자를 대상으로 작동.
+function Logger(constructor: Function) {
+  console.log('Class created:', constructor);
+}
+
+@Logger
+class Person {
+  constructor(public name: string, public age: number) {}
+}
