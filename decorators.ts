@@ -23,3 +23,13 @@ class Person {
 
 // Method Decorators
 // 메서드 선언 바로 앞에 위치, 클래스의 프로토타입, 메서드 이름, 메서드의 속성 설명자에 대한 접근 가능.
+function LogMethod(target: any, propertyName: string, descriptor: PropertyDescriptor) {
+  console.log('Method decorated:', propertyName);
+}
+
+class Person {
+  @LogMethod
+  greet() {
+    console.log('Hello!');
+  }
+}
