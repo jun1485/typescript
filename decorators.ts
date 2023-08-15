@@ -8,6 +8,7 @@
   }
 }
 
+
 // Class Decorators
 // 클래스 선언 바로 앞에 위치, 클래스의 생성자를 대상으로 작동.
 function Logger(constructor: Function) {
@@ -18,3 +19,7 @@ function Logger(constructor: Function) {
 class Person {
   constructor(public name: string, public age: number) {}
 }
+
+
+// Method Decorators
+// 메서드 선언 바로 앞에 위치, 클래스의 프로토타입, 메서드 이름, 메서드의 속성 설명자에 대한 접근 가능.
