@@ -33,3 +33,7 @@ class Person {
     console.log('Hello!');
   }
 }
+
+
+// 접근자 데코레이터
+// getter 또는 setter 선언 앞에 위치.
