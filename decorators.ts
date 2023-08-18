@@ -37,3 +37,9 @@ class Person {
 
 // 접근자 데코레이터
 // getter 또는 setter 선언 앞에 위치.
+function LogAccessor(target: any, name: string, descriptor: PropertyDescriptor) {
+  console.log('Accessor decorated:', name);
+}
+
+class Person {
+  private _age: number = 0;
