@@ -43,3 +43,13 @@ function LogAccessor(target: any, name: string, descriptor: PropertyDescriptor) 
 
 class Person {
   private _age: number = 0;
+
+ @LogAccessor
+  get age() {
+    return this._age;
+  }
+
+  set age(value: number) {
+    this._age = value;
+  }
+}
