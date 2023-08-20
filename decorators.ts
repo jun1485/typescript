@@ -53,3 +53,10 @@ class Person {
     this._age = value;
   }
 }
+
+
+// Property Decorators
+// 프로퍼티 선언 앞에 위치.
+function LogProperty(target: any, propertyName: string) {
+  console.log('Property decorated:', propertyName);
+}
