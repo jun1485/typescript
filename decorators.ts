@@ -60,3 +60,8 @@ class Person {
 function LogProperty(target: any, propertyName: string) {
   console.log('Property decorated:', propertyName);
 }
+
+class Person {
+  @LogProperty
+  public name: string;
+}
