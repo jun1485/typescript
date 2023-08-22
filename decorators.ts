@@ -65,3 +65,9 @@ class Person {
   @LogProperty
   public name: string;
 }
+
+
+// Parameter Decorators
+function LogParameter(target: any, methodName: string, parameterIndex: number) {
+  console.log(`Parameter in method ${methodName} at index ${parameterIndex} decorated`);
+}
