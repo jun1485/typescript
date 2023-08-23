@@ -71,3 +71,9 @@ class Person {
 function LogParameter(target: any, methodName: string, parameterIndex: number) {
   console.log(`Parameter in method ${methodName} at index ${parameterIndex} decorated`);
 }
+
+class Person {
+  greet(@LogParameter name: string) {
+    console.log(`Hello, ${name}!`);
+  }
+}
