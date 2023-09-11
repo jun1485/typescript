@@ -7,3 +7,13 @@ const obj: StringToNumber = {
   foo: 1,
   bar: 2
 };
+
+
+// 정해진 키만 사용 가능
+type FixedKeys = Record<'key1' | 'key2', number>;
+
+const obj: FixedKeys = {
+  key1: 1,
+  key2: 2
+};
+// obj.key3 = 3;  // 컴파일 에러, key3는 'key1' | 'key2'에 없는 키입니다.
