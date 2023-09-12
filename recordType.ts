@@ -17,3 +17,17 @@ const obj: FixedKeys = {
   key2: 2
 };
 // obj.key3 = 3;  // 컴파일 에러, key3는 'key1' | 'key2'에 없는 키입니다.
+
+
+// 객체의 모든 값이 같은 타입을 갖도록 강제
+<script setup lang="ts">
+import { ref } from 'vue';
+
+type UserData = Record<'name' | 'age' | 'email', string>;
+
+const user = ref<UserData>({
+  name: 'John',
+  age: '30',
+  email: 'john@example.com'
+});
+</script>
