@@ -31,3 +31,13 @@ const user = ref<UserData>({
   email: 'john@example.com'
 });
 </script>
+
+
+// Vue3에서 레코드타입 응용
+const filteredActivityList = computed(() => {
+
+Object.entries(activityStore.sortedActivityList).forEach(([key, activities]) => {
+	activities = activities.filter(activity => activity.tokenCode === route.params.token_code);
+  });
+return activityStore.sortedActivityList;
+});
