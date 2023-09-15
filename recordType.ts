@@ -34,10 +34,14 @@ const user = ref<UserData>({
 
 
 // Vue3에서 레코드타입 응용
+
+type SortedActivityList = Record<string, Activity[]>; // SortedActivityList는 문자열 타입의 키와 Activity[] 타입의 값을 가지는 객체
+
+
 const filteredActivityList = computed(() => {
 
-Object.entries(activityStore.sortedActivityList).forEach(([key, activities]) => {
-	activities = activities.filter(activity => activity.tokenCode === route.params.token_code);
+Object.entries(activityStore.sortedActivityList).forEach(([key, activities]) => { // 키-값 쌍을 배열로 변환 
+	activities = activities.filter(activity => activity.tokenCode === route.params.token_code);  // key와 activities는 튜플 형태로 언패킹되어 사용
   });
 return activityStore.sortedActivityList;
 });
